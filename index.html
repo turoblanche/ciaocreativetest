@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ciao Creative | Big Buzz for Small Biz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --pink: #ff6e8a;
+      --yellow: #ffe180;
+      --mint: #d7fbe8;
+      --peach: #ffd1b3;
+      --lavender: #e9ddff;
+      --text: #333;
+      --bg: #fff8f1;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Space Grotesk', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Shrikhand', cursive;
+      color: var(--pink);
+    }
+
+    header {
+      background: var(--mint);
+      padding: 60px 20px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .cta-button {
+      background: var(--yellow);
+      color: var(--text);
+      padding: 14px 30px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1rem;
+      box-shadow: 2px 2px 0 var(--pink);
+      transition: transform 0.2s ease, background 0.2s;
+    }
+
+    .cta-button:hover {
+      transform: scale(1.05);
+      background: var(--peach);
+    }
+
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    #services {
+      background-color: var(--lavender);
+    }
+
+    #what {
+      background-color: var(--mint);
+    }
+
+    #why {
+      background-color: var(--yellow);
+    }
+
+    #testimonials {
+      background-color: var(--peach);
+    }
+
+    .service-card, .testimonial-card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 4px 4px 0 var(--pink);
+      padding: 30px;
+      margin: 20px auto;
+      max-width: 500px;
+      transition: transform 0.3s ease;
+    }
+
+    .service-card:hover, .testimonial-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .service-section {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .service-image {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .service-image img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .service-content {
+      flex: 2;
+    }
+
+    .why-wrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 60px;
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px;
+      border-radius: 40px;
+      background-color: #ffe18088;
+    }
+
+    .why-wrapper img {
+      width: 320px;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .why-list {
+      text-align: left;
+      font-size: 1.4rem;
+      max-width: 500px;
+    }
+
+    .why-list li {
+      list-style: none;
+      padding: 16px 0;
+    }
+
+    .why-list li::before {
+      content: '⭐ ';
+      margin-right: 8px;
+    }
+
+    .what-grid-wrapper {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: stretch;
+      gap: 40px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .what-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 600px;
+      flex: 1;
+      justify-content: center;
+    }
+
+    .what-image {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .what-image img {
+      max-height: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .what-grid-item {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 2px 2px 0 var(--pink);
+    }
+
+    .what-grid-item span {
+      font-size: 2rem;
+      display: block;
+    }
+
+    .what-intro {
+      font-size: 1.25rem;
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto 40px;
+    }
+
+    form input, form textarea {
+      width: 90%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 2px solid var(--pink);
+      border-radius: 10px;
+      font-family: inherit;
+      font-size: 1rem;
+    }
+
+    form button {
+      margin-top: 10px;
+    }
+
+    footer {
+      padding: 20px;
+      background: var(--pink);
+      color: white;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Ciao Creative</h1>
+    <p><strong>Big Buzz for Small Biz</strong></p>
+    <button class="cta-button" onclick="scrollToContact()">Let's Chat</button>
+  </header>
+
+  <section id="what">
+    <h2>What We Do</h2>
+    <p class="what-intro">We help small businesses grow online with clever ads, great content, and clear strategy—without the fluff.</p>
+    <div class="what-grid-wrapper">
+      <div class="what-grid">
+        <div class="what-grid-item">
+          <span>📱</span>
+          <h3>Social Media Content</h3>
+          <p>Scroll-stopping graphics and captions for your brand on Instagram, Facebook & TikTok.</p>
+        </div>
+        <div class="what-grid-item">
+          <span>🔍</span>
+          <h3>Google Search Ads</h3>
+          <p>Appear at the top of search results when your customers are ready to buy.</p>
+        </div>
+        <div class="what-grid-item">
+          <span>📊</span>
+          <h3>Strategy & Reporting</h3>
+          <p>Smart setup, clear reports, and data-backed decisions you’ll actually understand.</p>
+        </div>
+      </div>
+      <div class="what-image">
+        <img src="what-we-do.png" alt="Illustration related to services">
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <h2>Our Packages</h2>
+    <div class="service-section">
+      <div class="service-image">
+        <img src="packages-cartoon.png" alt="cartoon image of package concept">
+      </div>
+      <div class="service-content">
+        <div class="service-card">
+          <h3>Social Media Ads & Content</h3>
+          <p>Engaging content and thumb-stopping ads for Facebook, Instagram and TikTok.</p>
+          <p><strong>$500/month</strong></p>
+        </div>
+
+        <div class="service-card">
+          <h3>Paid Google Search Ads</h3>
+          <p>Make sure your biz shows up when customers are ready to buy.</p>
+          <p><strong>$500/month</strong></p>
+        </div>
+
+        <div class="service-card">
+          <h3>Full Buzz Bundle</h3>
+          <p>Everything above, working together to get your name out there.</p>
+          <p><strong>$900/month</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="why">
+    <h2>Why Work With Me</h2>
+    <div class="why-wrapper">
+      <ul class="why-list">
+        <li>Meta & Google Ads wizard 🧠</li>
+        <li>No suits, no jargon—just fun 😄</li>
+        <li>Strategy tailored to your niche 🎯</li>
+        <li>In business for the right reasons 💛</li>
+      </ul>
+      <img src="your-uploaded-image.png" alt="cartoon of founder working on laptop" />
+    </div>
+  </section>
+
+  <section id="clients" style="background-color: #ffd9c5; padding: 80px 20px;">
+  <h2 style="text-align: center; font-family: 'Shrikhand', cursive; color: var(--pink); font-size: 2.5rem; margin-bottom: 40px;">Happy Clients</h2>
+  <div style="display: flex; justify-content: center; align-items: center; gap: 60px; max-width: 1300px; margin: 0 auto; flex-wrap: wrap;">
+    <div style="flex: 1; display: flex; align-items: center; justify-content: center;">
+      <img src="testimonials-cartoon.png" alt="Celebrating Clients" style="max-width: 350px; height: auto;" />
+    </div>
+    <div style="flex: 2; display: flex; flex-direction: column; gap: 20px;">
+      <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+        <div style="flex: 1; min-width: 300px; background: white; padding: 30px 40px; border-radius: 25px; box-shadow: 0 10px var(--pink);">
+          <strong>Applauz.io</strong> – Revenue scaled 200% in 6 months with strategic go-to-market ads.
+        </div>
+        <div style="flex: 1; min-width: 300px; background: white; padding: 30px 40px; border-radius: 25px; box-shadow: 0 10px var(--pink);">
+          <strong>Hannah Artwear</strong> – Boosted e-commerce sales 5x in 2 years through Meta & Google Ads.
+        </div>
+      </div>
+      <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+        <div style="flex: 1; min-width: 300px; background: white; padding: 30px 40px; border-radius: 25px; box-shadow: 0 10px var(--pink);">
+          <strong>Roc Cloudy</strong> – Improved Meta Ads ROAS from 2x to 10x within 1 year.
+        </div>
+        <div style="flex: 1; min-width: 300px; background: white; padding: 30px 40px; border-radius: 25px; box-shadow: 0 10px var(--pink);">
+          <strong>Dzine Kitchens</strong> – Averaged 3 quality weekly leads with under $500/month ad spend.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  <section id="contact">
+    <h2>Let's Chat</h2>
+    <form action="https://formspree.io/f/{your-form-id}" method="POST">
+      <input type="text" name="name" placeholder="Name" required /><br />
+      <input type="email" name="email" placeholder="Email" required /><br />
+      <input type="tel" name="phone" placeholder="Phone Number" required /><br />
+      <textarea name="details" placeholder="Tell us about your project..." rows="5" required></textarea><br />
+      <button class="cta-button" type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    © 2025 Ciao Creative
+  </footer>
+
+  <script>
+    function scrollToContact() {
+      document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+</body>
+</html>
