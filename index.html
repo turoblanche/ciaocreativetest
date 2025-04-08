@@ -145,39 +145,43 @@
     }
 
     .why-wrapper {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      gap: 60px;
-      max-width: 1100px;
-      margin: auto;
-      padding: 40px;
-      border-radius: 40px;
-      background-color: #ffe18088;
-    }
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px;
+  border-radius: 40px;
+  background-color: #ffe18088;
+}
 
-    .why-wrapper img {
-      width: 320px;
-      max-width: 100%;
-      height: auto;
-    }
+.why-wrapper img {
+  width: 320px;
+  max-width: 100%;
+  height: auto;
+}
 
-    .why-list {
-      text-align: left;
-      font-size: 1.4rem;
-      max-width: 500px;
-    }
+.why-card {
+  background: white;
+  border-radius: 25px;
+  box-shadow: 0 10px var(--pink);
+  padding: 30px 40px;
+  max-width: 500px;
+  text-align: left;
+}
 
-    .why-list li {
-      list-style: none;
-      padding: 16px 0;
-    }
+.why-list {
+  list-style: none;
+  font-size: 1.4rem;
+  padding-left: 0;
+}
 
-    .why-list li::before {
-      content: '⭐ ';
-      margin-right: 8px;
-    }
+.why-list li {
+  padding: 16px 0;
+}
+
 
     .what-grid-wrapper {
       display: flex;
@@ -349,17 +353,20 @@
   </section>
 
   <section id="why">
-    <h2>Why Work With Me</h2>
-    <div class="why-wrapper">
+  <h2>Why Work With Me</h2>
+  <div class="why-wrapper">
+    <div class="why-card">
       <ul class="why-list">
         <li>Meta & Google Ads wizard 🧠</li>
         <li>No suits, no jargon—just fun 😄</li>
         <li>Strategy tailored to your niche 🎯</li>
         <li>In business for the right reasons 💛</li>
       </ul>
-      <img src="your-uploaded-image.png" alt="cartoon of founder working on laptop" />
     </div>
-  </section>
+    <img src="your-uploaded-image.png" alt="cartoon of founder working on laptop" />
+  </div>
+</section>
+
 
   <section id="clients" style="background-color: #ffd9c5; padding: 80px 20px;">
   <h2 style="text-align: center; font-family: 'Shrikhand', cursive; color: var(--pink); font-size: 2.5rem; margin-bottom: 40px;">Happy Clients</h2>
