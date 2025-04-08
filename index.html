@@ -239,6 +239,39 @@
       color: white;
       text-align: center;
     }
+
+    @media (max-width: 768px) {
+  .service-section,
+  .why-wrapper,
+  .what-grid-wrapper {
+    flex-direction: column-reverse;
+    padding: 40px 20px;
+  }
+
+  .what-grid,
+  .what-image,
+  .service-content,
+  .service-image {
+    width: 100%;
+  }
+
+  .what-image img,
+  .service-image img,
+  .why-wrapper img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .why-wrapper {
+    gap: 30px;
+  }
+
+  .why-list {
+    text-align: center;
+    font-size: 1.1rem;
+  }
+}
+
   </style>
 </head>
 <body>
